@@ -1076,7 +1076,7 @@
               "align-items": "center"
             },
             "H1": {
-              "color": "#e43f3f"
+              "color": "#ed6724"
             }
           },
           "_name": "form4",
@@ -1124,7 +1124,7 @@
               "color": "@primaryColor"
             },
             ".mbr-section-title": {
-              "color": "#e43f3f"
+              "color": "#ed6724"
             }
           },
           "_name": "contacts2",
