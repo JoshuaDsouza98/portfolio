@@ -42,14 +42,9 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               className="md:col-span-1"
             >
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-lg">DS</span>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">Your Name</h3>
-                  <p className="text-white/60 text-sm">Data Scientist</p>
-                </div>
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold mb-2">Joshua D'Souza</h3>
+                <p className="text-white/60 text-sm">Data Scientist</p>
               </div>
               <p className="text-white/70 leading-relaxed text-sm">
                 Transforming complex data into actionable insights through machine learning and analytics.
