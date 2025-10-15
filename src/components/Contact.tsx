@@ -109,7 +109,7 @@ const Contact = () => {
               ) : (
                 <form 
                   onSubmit={handleSubmit} 
-                  action="https://formsubmit.co/joshuamdsouza98@gmail.com"
+                  action="https://formsubmit.co/03f357272aad6f191bf3d01f6c0b6fd1"
                   method="POST"
                   className="space-y-6"
                 >
