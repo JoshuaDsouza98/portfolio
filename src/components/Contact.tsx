@@ -84,15 +84,15 @@ const Contact = () => {
         </motion.div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white rounded-3xl p-8 md:p-12 shadow-xl"
+              className="bg-white rounded-3xl p-6 md:p-8 lg:p-12 shadow-xl"
             >
-              <h3 className="text-2xl font-bold text-secondary mb-6">Send a Message</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-secondary mb-4 md:mb-6">Send a Message</h3>
               
               {isSubmitted ? (
                 <motion.div
@@ -200,15 +200,15 @@ const Contact = () => {
               initial={{ opacity: 0, x: 30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="space-y-8"
+              className="space-y-6 md:space-y-8"
             >
-              <div className="bg-gradient-to-br from-primary to-primary-dark rounded-3xl p-8 md:p-12 text-white shadow-xl">
-                <h3 className="text-2xl font-bold mb-4">Let's Connect</h3>
-                <p className="text-white/90 leading-relaxed mb-8">
+              <div className="bg-gradient-to-br from-primary to-primary-dark rounded-3xl p-6 md:p-8 lg:p-12 text-white shadow-xl">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Let's Connect</h3>
+                <p className="text-white/90 text-sm md:text-base leading-relaxed mb-6 md:mb-8">
                   I'm always excited to discuss new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!
                 </p>
 
-                <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6">
                   {contactInfo.map((info, index) => (
                     <motion.a
                       key={info.title}
@@ -217,14 +217,14 @@ const Contact = () => {
                       animate={isInView ? { opacity: 1, x: 0 } : {}}
                       transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
                       whileHover={{ x: 5 }}
-                      className="flex items-start space-x-4 group"
+                      className="flex items-start space-x-3 md:space-x-4 group"
                     >
-                      <div className="bg-white/10 backdrop-blur-sm p-3 rounded-xl group-hover:bg-white/20 transition-colors">
-                        <info.icon className="w-6 h-6" />
+                      <div className="bg-white/10 backdrop-blur-sm p-2.5 md:p-3 rounded-xl group-hover:bg-white/20 transition-colors">
+                        <info.icon className="w-5 h-5 md:w-6 md:h-6" />
                       </div>
                       <div>
-                        <div className="text-sm text-white/70 mb-1">{info.title}</div>
-                        <div className="font-semibold text-lg">{info.value}</div>
+                        <div className="text-xs md:text-sm text-white/70 mb-1">{info.title}</div>
+                        <div className="font-semibold text-base md:text-lg break-all">{info.value}</div>
                       </div>
                     </motion.a>
                   ))}
@@ -236,7 +236,7 @@ const Contact = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="bg-white rounded-3xl p-8 shadow-xl"
+                className="bg-white rounded-3xl p-6 md:p-8 shadow-xl"
               >
                 <h3 className="text-xl font-bold text-secondary mb-6">Quick Questions?</h3>
                 <div className="space-y-4">

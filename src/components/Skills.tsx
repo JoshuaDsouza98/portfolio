@@ -113,7 +113,7 @@ const Skills = () => {
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.title}
@@ -121,30 +121,30 @@ const Skills = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -8, transition: { duration: 0.2 } }}
-              className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="group relative bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300"
             >
               {/* Gradient Border Effect */}
               <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
               
               {/* Icon */}
-              <div className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${skill.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <skill.icon className="w-8 h-8 text-white" />
+              <div className={`inline-flex p-3 md:p-4 rounded-xl bg-gradient-to-br ${skill.color} mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <skill.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-bold text-secondary mb-4 group-hover:text-primary transition-colors">
+              <h3 className="text-xl md:text-2xl font-bold text-secondary mb-3 md:mb-4 group-hover:text-primary transition-colors">
                 {skill.title}
               </h3>
 
               {/* Details List */}
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 {skill.details.map((detail, detailIndex) => (
                   <div key={detailIndex} className="group/item">
-                    <div className="flex items-center mb-1.5">
-                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${skill.color} mr-2.5`}></div>
-                      <span className="font-bold text-secondary text-sm uppercase tracking-wide">{detail.label}</span>
+                    <div className="flex items-center mb-1 md:mb-1.5">
+                      <div className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-gradient-to-r ${skill.color} mr-2 md:mr-2.5`}></div>
+                      <span className="font-bold text-secondary text-xs md:text-sm uppercase tracking-wide">{detail.label}</span>
                     </div>
-                    <p className="text-secondary/70 text-sm leading-relaxed pl-4.5">
+                    <p className="text-secondary/70 text-xs md:text-sm leading-relaxed pl-3.5 md:pl-4.5">
                       {detail.value}
                     </p>
                   </div>

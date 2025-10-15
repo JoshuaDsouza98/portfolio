@@ -58,7 +58,7 @@ const Certifications = () => {
         </motion.div>
 
         {/* Certifications Grid */}
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 justify-items-center">
+        <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-6 md:gap-8 justify-items-center">
           {certifications.map((cert, index) => (
             <motion.div
               key={cert.title}
@@ -66,10 +66,10 @@ const Certifications = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               whileHover={{ y: -12, boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.3)" }}
-              className="group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500"
+              className="group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 w-full"
             >
               {/* Certificate Image/Badge */}
-              <div className={`relative h-64 bg-gradient-to-br ${cert.gradient} flex items-center justify-center overflow-hidden`}>
+              <div className={`relative h-48 md:h-64 bg-gradient-to-br ${cert.gradient} flex items-center justify-center overflow-hidden`}>
                 {/* Certificate Image */}
                 <img 
                   src={cert.image} 
@@ -101,21 +101,21 @@ const Certifications = () => {
               </div>
 
               {/* Content */}
-              <div className="p-8">
-                <div className="mb-4">
-                  <h3 className="text-xl font-bold text-secondary mb-2 leading-tight group-hover:text-primary transition-colors">
+              <div className="p-6 md:p-8">
+                <div className="mb-3 md:mb-4">
+                  <h3 className="text-lg md:text-xl font-bold text-secondary mb-2 leading-tight group-hover:text-primary transition-colors">
                     {cert.title}
                   </h3>
-                  <p className="text-sm font-semibold text-primary mb-1">{cert.issuer}</p>
+                  <p className="text-xs md:text-sm font-semibold text-primary mb-1">{cert.issuer}</p>
                   <p className="text-xs text-secondary/60">{cert.date}</p>
                 </div>
 
                 {/* Skills */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-4 md:mb-6">
                   {cert.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="bg-gradient-to-br from-dominant-light to-dominant px-3 py-1 rounded-full text-xs font-semibold text-secondary"
+                      className="bg-gradient-to-br from-dominant-light to-dominant px-2.5 md:px-3 py-1 rounded-full text-xs font-semibold text-secondary"
                     >
                       {skill}
                     </span>

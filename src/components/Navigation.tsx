@@ -47,7 +47,7 @@ const Navigation = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-xl font-bold text-secondary">
+            <span className="text-lg md:text-xl font-bold text-secondary">
               Joshua D'Souza
             </span>
           </motion.a>

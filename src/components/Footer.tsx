@@ -120,8 +120,8 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="border-t border-white/10 pt-8 text-center"
           >
-            <p className="text-white/50 text-sm">
-              © {currentYear} Your Name. Crafted with passion and precision.
+            <p className="text-white/50 text-xs md:text-sm">
+              © {currentYear} Joshua D'Souza. Crafted with passion and precision.
             </p>
           </motion.div>
         </div>

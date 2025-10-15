@@ -57,12 +57,12 @@ const About = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="float-right ml-8 mb-6 shape-outside-circle"
+                className="float-none md:float-right mx-auto md:mx-0 md:ml-8 mb-6 w-48 h-48 md:w-64 md:h-64"
               >
                 <img 
                   src="/assets/joshua-profile.jpg" 
                   alt="Joshua D'Souza - Data Scientist"
-                  className="w-64 h-64 rounded-full object-cover shadow-2xl ring-4 ring-primary/20"
+                  className="w-full h-full rounded-full object-cover shadow-2xl ring-4 ring-primary/20"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                   }}

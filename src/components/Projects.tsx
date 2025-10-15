@@ -101,29 +101,29 @@ const Projects = () => {
               </motion.div>
 
               {/* Content */}
-              <div className="p-8 md:p-12 flex flex-col justify-center text-white">
+              <div className="p-6 md:p-8 lg:p-12 flex flex-col justify-center text-white">
                 <motion.div
                   key={`content-${currentIndex}`}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                  <div className="text-primary-light text-sm font-semibold mb-4">
+                  <div className="text-primary-light text-xs md:text-sm font-semibold mb-3 md:mb-4">
                     PROJECT {String(currentIndex + 1).padStart(2, '0')}
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
                     {projects[currentIndex].title}
                   </h3>
-                  <p className="text-white/80 text-lg mb-6 leading-relaxed">
+                  <p className="text-white/80 text-sm md:text-base lg:text-lg mb-4 md:mb-6 leading-relaxed">
                     {projects[currentIndex].description}
                   </p>
                   
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-8">
+                  <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
                     {projects[currentIndex].tags.map((tag) => (
                       <span
                         key={tag}
-                        className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium"
+                        className="bg-white/10 backdrop-blur-sm px-3 md:px-4 py-1.5 md:py-2 rounded-full text-xs md:text-sm font-medium"
                       >
                         {tag}
                       </span>
@@ -131,12 +131,12 @@ const Projects = () => {
                   </div>
 
                   {/* Buttons */}
-                  <div className="flex gap-4">
+                  <div className="flex gap-3 md:gap-4">
                     <Link to={projects[currentIndex].link}>
                       <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex items-center space-x-2 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-light transition-colors"
+                        className="flex items-center space-x-2 bg-primary text-white px-4 md:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold hover:bg-primary-light transition-colors"
                       >
                         <span>View Details</span>
                         <ArrowRight className="w-4 h-4" />
@@ -150,17 +150,17 @@ const Projects = () => {
             {/* Navigation Arrows */}
             <button
               onClick={prevProject}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-3 rounded-full transition-all z-10"
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-2 md:p-3 rounded-full transition-all z-10"
               aria-label="Previous project"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
             </button>
             <button
               onClick={nextProject}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-3 rounded-full transition-all z-10"
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-2 md:p-3 rounded-full transition-all z-10"
               aria-label="Next project"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
             </button>
 
             {/* Dots */}

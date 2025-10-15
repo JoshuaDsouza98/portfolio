@@ -209,26 +209,26 @@ const Timeline = () => {
                     </div>
 
                     {/* Text Content */}
-                    <div className={`p-10 flex flex-col justify-center transition-all duration-500 ${
+                    <div className={`p-6 md:p-8 lg:p-10 flex flex-col justify-center transition-all duration-500 ${
                       selectedExperience === index 
                         ? 'md:col-span-1' 
                         : `md:col-span-3 ${isEven ? 'md:order-2' : 'md:order-1'}`
                     }`}>
-                      <div className="flex items-center space-x-3 mb-6 lg:hidden">
-                        <div className="bg-primary/10 p-3 rounded-xl">
-                          <item.icon className="w-6 h-6 text-primary" />
+                      <div className="flex items-center space-x-3 mb-4 md:mb-6 lg:hidden">
+                        <div className="bg-primary/10 p-2 md:p-3 rounded-xl">
+                          <item.icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <span className="text-xl font-bold text-primary">{item.year}</span>
+                        <span className="text-lg md:text-xl font-bold text-primary">{item.year}</span>
                       </div>
                       
-                      <h3 className="text-3xl md:text-4xl font-bold text-secondary mb-3 leading-tight">
+                      <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary mb-2 md:mb-3 leading-tight">
                         {item.title}
                       </h3>
-                      <div className="flex items-center space-x-2 text-primary mb-4">
-                        <MapPin className="w-5 h-5" />
-                        <span className="text-base font-semibold">{item.company}</span>
+                      <div className="flex items-center space-x-2 text-primary mb-3 md:mb-4">
+                        <MapPin className="w-4 h-4 md:w-5 md:h-5" />
+                        <span className="text-sm md:text-base font-semibold">{item.company}</span>
                       </div>
-                      <p className="text-secondary/70 leading-relaxed text-base mb-6">
+                      <p className="text-secondary/70 leading-relaxed text-sm md:text-base mb-4 md:mb-6">
                         {item.description}
                       </p>
                       
