@@ -234,7 +234,7 @@ const FantasyPremierLeague = () => {
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { value: '85%', label: 'Prediction Accuracy' },
-                { value: '1000+', label: 'Active Users' },
+                { value: '15', label: ' minutes saved' },
                 { value: '15%', label: 'Avg. Rank Improvement' },
               ].map((stat, index) => (
                 <motion.div
