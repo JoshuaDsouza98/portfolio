@@ -15,7 +15,7 @@ const Projects = () => {
       gradient: 'from-green-500 to-emerald-500',
       tags: ['Python', 'Streamlit', 'ML'],
       link: '/projects/fantasy-premier-league',
-      image: 'assets/projects/Fantasy-Premier-League.png',
+      image: '/assets/projects/Fantasy-Premier-League.png',
     },
     {
       title: 'Sainsbury\'s Customer Choice Modelling',
