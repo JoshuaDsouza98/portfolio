@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
-import { ArrowLeft,  FileText, Hand, Mic, Cpu } from 'lucide-react'
+import { ArrowLeft, Cpu, FileText, Hand, Mic } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { asset } from '../config'
 
 const SmartHandGlove = () => {
   return (
@@ -99,7 +100,7 @@ const SmartHandGlove = () => {
             className="rounded-3xl overflow-hidden shadow-2xl"
           >
             <img 
-              src="/assets/projects/Smart-hand-Glove.png" 
+              src={asset('assets/projects/Smart-hand-Glove.png')} 
               alt="Smart Hand Glove for ASL Translation - IoT wearable device with sensors"
               className="w-full h-auto object-cover"
               onError={(e) => {

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
-import { ArrowLeft, Github, ExternalLink, Target, Zap, TrendingUp } from 'lucide-react'
+import { ArrowLeft, ExternalLink, Github, Target, TrendingUp, Zap } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { asset } from '../config'
 
 const FantasyPremierLeague = () => {
   return (
@@ -106,7 +107,7 @@ const FantasyPremierLeague = () => {
             className="rounded-3xl overflow-hidden shadow-2xl"
           >
             <img 
-              src="/assets/projects/Fantasy-Premier-League.png" 
+              src={asset('assets/projects/Fantasy-Premier-League.png')} 
               alt="Fantasy Premier League AI Assistant - Machine learning powered team selection"
               className="w-full h-auto object-cover"
               onError={(e) => {

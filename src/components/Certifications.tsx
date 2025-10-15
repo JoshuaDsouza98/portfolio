@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Award, ExternalLink, CheckCircle2 } from 'lucide-react'
+import { Award, CheckCircle2, ExternalLink } from 'lucide-react'
+import { asset } from '../config'
 
 const Certifications = () => {
   const ref = useRef(null)
@@ -12,7 +13,7 @@ const Certifications = () => {
       issuer: 'Microsoft',
       date: 'August 17, 2025',
       credentialId: '12634FFF3D62C947',
-      image: '/assets/certifications/azure-data-scientist.png',
+      image: 'assets/certifications/azure-data-scientist.png',
       verifyUrl: 'https://learn.microsoft.com/api/credentials/share/en-us/JoshuaDsouza-2073/12634FFF3D62C947?sharingId=40407E50BB6D2429',
       skills: ['Azure Machine Learning', 'Python', 'Data Science', 'MLOps'],
       gradient: 'from-blue-600 to-cyan-500'
@@ -22,7 +23,7 @@ const Certifications = () => {
       issuer: 'Microsoft',
       date: 'May 7, 2025',
       credentialId: 'A65DC1E9580AAF6E',
-      image: '/assets/certifications/Azure-Fundamentals.png',
+      image: 'assets/certifications/Azure-Fundamentals.png',
       verifyUrl: 'https://learn.microsoft.com/en-us/users/joshuadsouza-2073/credentials/a65dc1e9580aaf6e?ref=https%3A%2F%2Fwww.linkedin.com%2F',
       skills: ['Azure AI', 'Cognitive Services', 'NLP', 'Computer Vision'],
       gradient: 'from-purple-600 to-blue-500'
@@ -72,7 +73,7 @@ const Certifications = () => {
               <div className={`relative h-48 md:h-64 bg-gradient-to-br ${cert.gradient} flex items-center justify-center overflow-hidden`}>
                 {/* Certificate Image */}
                 <img 
-                  src={cert.image} 
+                  src={asset(cert.image)} 
                   alt={cert.title}
                   className="absolute inset-0 w-full h-full object-contain p-8 z-10"
                   onError={(e) => {

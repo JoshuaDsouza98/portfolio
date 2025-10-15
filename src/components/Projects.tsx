@@ -2,6 +2,7 @@ import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { asset } from '../config'
 
 const Projects = () => {
   const ref = useRef(null)
@@ -15,7 +16,7 @@ const Projects = () => {
       gradient: 'from-green-500 to-emerald-500',
       tags: ['Python', 'Streamlit', 'ML'],
       link: '/projects/fantasy-premier-league',
-      image: '/assets/projects/Fantasy-Premier-League.png',
+      image: 'assets/projects/Fantasy-Premier-League.png',
     },
     {
       title: 'Sainsbury\'s Customer Choice Modelling',
@@ -23,7 +24,7 @@ const Projects = () => {
       gradient: 'from-blue-500 to-cyan-500',
       tags: ['Machine Learning', 'XGBoost', 'Python'],
       link: '/projects/sainsburys',
-      image: '/assets/projects/sainsburys-retail-analytics.jpg',
+      image: 'assets/projects/sainsburys-retail-analytics.jpg',
     },
     {
       title: 'Smart Hand Glove for ASL Translation',
@@ -31,7 +32,7 @@ const Projects = () => {
       gradient: 'from-purple-500 to-pink-500',
       tags: ['IoT', 'SVM', 'Arduino'],
       link: '/projects/smart-hand-glove',
-      image: '/assets/projects/Smart-hand-Glove.png',
+      image: 'assets/projects/Smart-hand-Glove.png',
     },
   ]
 
@@ -89,7 +90,7 @@ const Projects = () => {
                 {projects[currentIndex].image ? (
                   <>
                     <img 
-                      src={projects[currentIndex].image!} 
+                      src={asset(projects[currentIndex].image!)} 
                       alt={projects[currentIndex].title}
                       className="w-full h-full object-cover"
                     />

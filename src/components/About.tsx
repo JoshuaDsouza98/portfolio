@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { asset } from '../config'
 
 const About = () => {
   const ref = useRef(null)
@@ -60,7 +60,7 @@ const About = () => {
                 className="float-none md:float-right mx-auto md:mx-0 md:ml-8 mb-6 w-48 h-48 md:w-64 md:h-64"
               >
                 <img 
-                  src="/assets/joshua-profile.jpg" 
+                  src={asset('assets/joshua-profile.jpg')} 
                   alt="Joshua D'Souza - Data Scientist"
                   className="w-full h-full rounded-full object-cover shadow-2xl ring-4 ring-primary/20"
                   onError={(e) => {

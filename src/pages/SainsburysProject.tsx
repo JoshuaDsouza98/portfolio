@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
-import { ArrowLeft,BarChart3, Brain, TrendingUp } from 'lucide-react'
+import { ArrowLeft, BarChart3, Brain, TrendingUp } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { asset } from '../config'
 
 const SainsburysProject = () => {
   return (
@@ -88,7 +89,7 @@ const SainsburysProject = () => {
             className="rounded-3xl overflow-hidden shadow-2xl"
           >
             <img 
-              src="/assets/projects/sainsburys-retail-analytics.jpg" 
+              src={asset('assets/projects/sainsburys-retail-analytics.jpg')} 
               alt="Sainsbury's Retail Analytics - Shopping cart with growth charts and data visualization"
               className="w-full h-auto object-cover"
               onError={(e) => {
